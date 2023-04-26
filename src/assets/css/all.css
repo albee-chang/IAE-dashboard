@@ -10772,6 +10772,39 @@ textarea.form-control-lg {
 }
 * {
   font-family: "Noto Serif TC", serif;
+  transition: all 0.3s ease;
+}
+
+.decoratePattern {
+  z-index: -1;
+  position: fixed;
+  top: 7%;
+  left: 12%;
+  bottom: 0;
+  right: 0;
+}
+
+.outlineBox {
+  display: flex;
+}
+
+.box1 {
+  border: 2px solid white;
+  height: 150px;
+  width: 15px;
+}
+
+.box2 {
+  border: 2px solid white;
+  height: 40px;
+  width: 120px;
+}
+
+.box3 {
+  margin-top: 30px;
+  background-color: white;
+  height: 190px;
+  width: 5px;
 }
 
 .loginBg {
@@ -10788,7 +10821,7 @@ textarea.form-control-lg {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 8rem;
+  margin-top: 10rem;
 }
 
 .title {
@@ -10816,21 +10849,276 @@ textarea.form-control-lg {
   z-index: -999;
 }
 
+.loginIcon {
+  opacity: 0.8;
+}
+
 .inputArea {
   font-family: sans-serif;
   border: none;
   background-color: transparent;
   border-bottom: 1px solid #646464;
-  color: #949494;
-  padding: 10px 5px;
+  padding: 0.8rem 0.5rem;
   letter-spacing: 0.1rem;
 }
 
+::placeholder {
+  color: #bfced1;
+}
+
 .loginBtn {
-  margin-top: 125px;
+  margin-top: 110px;
   width: 250px;
   height: 40px;
   border: 2px solid white;
   background-color: white 0.5;
   box-shadow: 0 0 5px 5px #9fdcff;
+}
+
+@media screen and (max-width: 768px) {
+  .decoratePattern {
+    display: none;
+  }
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.main {
+  width: 100%;
+}
+
+nav {
+  background-color: none;
+  z-index: 999;
+}
+
+.adminTitle {
+  position: absolute;
+  top: 55px;
+  right: 6%;
+  z-index: 999;
+}
+
+.IAE-logo-EN {
+  max-width: 50%;
+  height: auto;
+  object-fit: cover;
+  margin: 50px;
+}
+
+.globalIcon {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.sidebar {
+  padding-top: 11rem;
+  padding-left: 3rem;
+  padding-right: 0;
+  background-image: url(../img/loginBg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
+.langCH {
+  color: #1e2b3d;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
+
+.listItem {
+  list-style: none;
+  background-color: #f7f3f0;
+  opacity: 0.8;
+  padding-top: 0.3rem;
+  padding-bottom: 0.5rem;
+}
+
+.listItem li {
+  margin: 0.2rem -10px 0.2rem -40px;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 0.5rem 0 0.5rem 0.5rem;
+}
+.listItem li:nth-child(even) {
+  background-color: #e4f7fc;
+}
+.listItem li:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+.listItem li:hover .listCH {
+  color: #19d0ff;
+}
+.listItem li:hover .listEn {
+  color: #e487a2;
+}
+.listItem li:hover .activeBox {
+  display: block;
+}
+.listItem li .listEn {
+  padding-left: 1rem;
+}
+
+.activeBox {
+  background-color: #e487a2;
+  width: 10px;
+  height: 100%;
+  display: none;
+}
+
+.sidebarContant {
+  height: 70%;
+}
+
+.progressBar {
+  background-color: #f0f0f0;
+  padding: 0.5rem 1rem;
+  color: #abadaf;
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+}
+
+.progressBarIcon {
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  letter-spacing: 0.1rem;
+}
+.filters select {
+  border: none;
+  border-bottom: 1px solid #787878;
+  color: #787878;
+}
+.filters select:hover {
+  cursor: pointer;
+  color: #668ecf;
+  border-bottom: 1px solid #668ecf;
+}
+
+.dateFilter {
+  display: flex;
+}
+
+input {
+  border: 1px solid #abadaf;
+  color: #787878;
+}
+input:hover {
+  cursor: pointer;
+  color: #668ecf;
+  border: 1px solid #63B9CF;
+  box-shadow: 0 0 10px 0 rgba(99, 185, 207, 0.3);
+}
+
+.dataNums {
+  font-weight: bold;
+  color: #787878;
+}
+.dataNums .dataTotalNums {
+  color: #e487a2;
+  font-size: 2rem;
+  padding: 0 1rem;
+}
+
+.toolBarIcon {
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+  margin-bottom: 2px;
+}
+.toolBarIcon:hover {
+  cursor: pointer;
+}
+
+.toolBarBtn1:hover {
+  border: 3px solid #fad6f5;
+  border-radius: 2rem;
+  padding-top: 0.5rem;
+  cursor: pointer;
+  color: #668ecf;
+  font-weight: bold;
+  box-shadow: 0 0 10px 0 rgba(112, 22, 75, 0.3);
+}
+
+.toolBarBtn2:hover {
+  border: 3px solid #fad6f5;
+  border-radius: 2rem;
+  padding-top: 0.5rem;
+  cursor: pointer;
+  color: #668ecf;
+  font-weight: bold;
+  box-shadow: 0 0 10px 0 rgba(53, 81, 128, 0.3);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+table thead {
+  background-color: #e487a2;
+}
+table thead tr th {
+  padding: 0.2rem 1rem;
+  text-align: center;
+  color: white;
+  letter-spacing: 0.1rem;
+  font-size: 14px;
+}
+table tbody tr td {
+  padding: 0.2rem 1rem;
+  text-align: left;
+  color: #787878;
+  font-size: 14px;
+  letter-spacing: 0.1rem;
+}
+table tbody tr td a {
+  margin: 0;
+}
+
+.manageBtn {
+  font-size: 14px;
+  letter-spacing: 0.1rem;
+  color: #63B9CF;
+  margin: 0;
+}
+
+.amountBar {
+  display: inline;
+  float: right;
+  background-color: #fffc9e;
+  padding: 0.5rem 1.5rem;
+  letter-spacing: 0.1rem;
+}
+
+.mainFunctionBar {
+  float: right;
+  margin: 2rem 0;
+  font-size: 14px;
+  padding: 0.5rem 1rem;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  color: #6f7277;
+}
+.mainFunctionBar .mainFunctionIcon {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  margin-right: 0.1rem;
+  margin-bottom: 0.1rem;
+}
+.mainFunctionBar .mainFunctionIcon:hover {
+  cursor: pointer;
 }/*# sourceMappingURL=all.css.map */

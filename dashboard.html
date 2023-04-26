@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>耘想科技</title>
+    <link rel="stylesheet" href="./src/assets/css/all.css" />
+  </head>
+  <body>
+    <div class="main row">
+      <div class="sidebar col-2">
+        <h5 class="langCH">繁體中文</h5>
+        <ul class="listItem">
+          <li class="position-relative">
+            <span class="listCH">關於耘想</span
+            ><span class="listEn">About Us</span>
+            <span class="position-absolute top-0 start-100 activeBox"></span>
+          </li>
+          <li class="position-relative">
+            <span class="listCH">製作項目</span
+            ><span class="listEn">Services</span>
+            <span class="position-absolute top-0 start-100 activeBox"></span>
+          </li>
+          <li class="position-relative">
+            <span class="listCH">作品分享</span
+            ><span class="listEn">Our Work</span>
+            <span class="position-absolute top-0 start-100 activeBox"></span>
+          </li>
+          <li class="position-relative">
+            <span class="listCH">耘想快訊</span
+            ><span class="listEn">Latest News</span>
+            <span class="position-absolute top-0 start-100 activeBox"></span>
+          </li>
+          <li class="position-relative">
+            <span class="listCH">知識文章</span
+            ><span class="listEn">Knowledge</span>
+            <span class="position-absolute top-0 start-100 activeBox"></span>
+          </li>
+          <li class="position-relative">
+            <span class="listCH">客戶問答</span><span class="listEn">FAQ</span>
+            <span class="position-absolute top-0 start-100 activeBox"></span>
+          </li>
+          <li class="position-relative">
+            <span class="listCH">下載專區</span
+            ><span class="listEn">Download</span>
+            <span class="position-absolute top-0 start-100 activeBox"></span>
+          </li>
+          <li class="position-relative">
+            <span class="listCH">聯絡耘想</span
+            ><span class="listEn">Get in touch</span>
+            <span class="position-absolute top-0 start-100 activeBox"></span>
+          </li>
+          <li class="position-relative">
+            <span class="listCH">首頁相關設定</span
+            ><span class="listEn">Homepage</span>
+            <span class="position-absolute top-0 start-100 activeBox"></span>
+          </li>
+          <li class="position-relative">
+            <span class="listCH">案件</span><span class="listEn">Case</span>
+            <span class="position-absolute top-0 start-100 activeBox"></span>
+          </li>
+          <li class="position-relative">
+            <span class="listCH">通訊錄</span
+            ><span class="listEn">Contacts</span>
+            <span class="position-absolute top-0 start-100 activeBox"></span>
+          </li>
+          <li class="position-relative">
+            <span class="listCH">主機單位</span><span class="listEn">Host</span>
+            <span class="position-absolute top-0 start-100 activeBox"></span>
+          </li>
+          <li class="position-relative">
+            <span class="listCH">網域單位</span
+            ><span class="listEn">Domain</span>
+            <span class="position-absolute top-0 start-100 activeBox"></span>
+          </li>
+          <li class="position-relative">
+            <span class="listCH">憑證單位</span><span class="listEn">SSL</span>
+            <span class="position-absolute top-0 start-100 activeBox"></span>
+          </li>
+          <li class="position-relative">
+            <span class="listCH">使用者</span><span class="listEn">Guest</span>
+            <span class="position-absolute top-0 start-100 activeBox"></span>
+          </li>
+          <li class="position-relative">
+            <span class="listCH">管理員</span
+            ><span class="listEn">Administrator</span>
+            <span class="position-absolute top-0 start-100 activeBox"></span>
+          </li>
+          <li class="position-relative">
+            <span class="listCH">系統設定</span
+            ><span class="listEn">Setup</span>
+            <span class="position-absolute top-0 start-100 activeBox"></span>
+          </li>
+        </ul>
+      </div>
+      <div class="contant col-10">
+        <div class="adminLogo">
+          <nav class="text-end">
+            <h4 class="adminTitle">網站內容管理系統</h4>
+            <img
+              class="IAE-logo-EN"
+              src="./src/assets/img/IAE-logo-EN.png"
+              alt="IAE-logo-EN"
+            />
+            <img
+              class="globalIcon"
+              src="./src/assets/img/globalIcon_02.png"
+              alt="globalIcon"
+            />
+          </nav>
+        </div>
+        <div class="sidebarContant">
+          <div class="progressBar">
+            <img
+              class="progressBarIcon"
+              src="./src/assets/img/homeIcon-01.svg"
+              alt="homeIcon"
+            />
+            | 案件處理
+          </div>
+          <div class="searchBar">
+            <div class="filters">
+              <button class="searchBarBtn btn">
+                <img
+                  class="searchIcon"
+                  src="./src/assets/img/searchIcon.png"
+                  alt="searchIcon"
+                />
+              </button>
+              <select name="year" id="year">
+                <option value="hide">年份</option>
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+              </select>
+              <select name="month" id="month">
+                <option value="hide">月份</option>
+                <option value="1">1月</option>
+                <option value="2">2月</option>
+                <option value="3">3月</option>
+              </select>
+              <select name="status" id="status">
+                <option value="hide">案件狀態</option>
+                <option value="1">處理中</option>
+                <option value="2">已結案</option>
+              </select>
+              <select name="category" id="category">
+                <option value="hide">案件分類</option>
+                <option value="1">網站建置</option>
+                <option value="2">網站維護</option>
+              </select>
+              <select name="sales" id="sales">
+                <option value="hide">負責業務</option>
+                <option value="1">業務A</option>
+                <option value="2">業務B</option>
+              </select>
+              <select name="source" id="source">
+                <option value="hide">來源</option>
+                <option value="1">網站</option>
+                <option value="2">電話</option>
+              </select>
+              <input type="text" placeholder="烽紳" id="filter" />
+              <div class="dateFilter">
+                <input type="date" id="dateStart" />
+                <span>-</span>
+                <input type="date" id="dateEnd" />
+              </div>
+              <input type="text" placeholder="搜尋 search..." id="searchFunction">
+            </div>
+            <div class="dataNums text-center my-3">
+              <span class="dataNumsText"
+                >目前共有 <span class="dataTotalNums">2</span> 筆資料</span
+              >
+            </div>
+            <div class="toolBar d-flex row ms-2">
+              <div class="col-8">
+                <button class="toolBarBtn1 btn">
+                  <img
+                    class="toolBarIcon"
+                    src="./src/assets/img/toolIcon/tool-icon-add.svg"
+                    alt="addIcon"
+                  />
+                  新增一筆案件
+                </button>
+                <button class="toolBarBtn1 btn">
+                  <img
+                    class="toolBarIcon"
+                    src="./src/assets/img/toolIcon/tool-icon-bill.svg"
+                    alt="editIcon"
+                  />
+                  發票記錄管理
+                </button>
+                <button class="toolBarBtn1 btn">
+                  <img
+                    class="toolBarIcon"
+                    src="./src/assets/img/toolIcon/tool-icon-cloud.svg"
+                    alt="deleteIcon"
+                  />
+                  主機用戶
+                </button>
+                <button class="toolBarBtn1 btn">
+                  <img
+                    class="toolBarIcon"
+                    src="./src/assets/img/toolIcon/tool-icon-growing.svg"
+                    alt="downloadIcon"
+                  />
+                  案件成長
+                </button>
+              </div>
+              <div class="col-4 text-center">
+                <button class="toolBarBtn2 btn">
+                  <img
+                    class="toolBarIcon"
+                    src="./src/assets/img/toolIcon/tool-icon-trash.svg"
+                    alt="deleteIcon"
+                  />
+                  全部刪除
+                </button>
+                <button class="toolBarBtn2 btn">
+                  <img
+                    class="toolBarIcon"
+                    src="./src/assets/img/toolIcon/tool-icon-refresh.svg"
+                    alt="refreshIcon"
+                  />
+                  全部更新
+                </button>
+              </div>
+            </div>
+            <div class="dataTable">
+              <table>
+                <thead>
+                  <tr>
+                    <th><input type="checkbox" /></th>
+                    <th>編號</th>
+                    <th>案件標題</th>
+                    <th>客戶名稱</th>
+                    <th>聯絡人</th>
+                    <th>接案日</th>
+                    <th>結案日</th>
+                    <th>訂金</th>
+                    <th>中款</th>
+                    <th>尾款</th>
+                    <th>案件金額</th>
+                    <th>主機</th>
+                    <th>SSL</th>
+                    <th>狀態</th>
+                    <th>附件管理</th>
+                    <th>發票</th>
+                    <th>管理</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <input type="checkbox" />
+                    </td>
+                    <td>PL2023010301客製形象</td>
+                    <td>PL2023010301烽紳科技有限公司 RWD形象網站</td>
+                    <td>烽紳科技有限公司</td>
+                    <td>鍾順翰</td>
+                    <td>2023/03/01</td>
+                    <td>2023/03/01</td>
+                    <td>2023/01/07 $55,000</td>
+                    <td>$30,000</td>
+                    <td></td>
+                    <td>NT $110,000(含稅)</td>
+                    <td>烽紳主機</td>
+                    <td>烽紳SSL</td>
+                    <td>處理中</td>
+                    <td>
+                      <a href="#" type="button" class="manageBtn checkBtn btn">
+                       <img class="toolBarIcon"src="./src/assets/img/toolIcon/tool-icon-check.svg" alt="checkIcon"> 檢視
+                      </a>
+                      <a href="#" type="button" class="manageBtn deleteBtn btn">
+                        <img class="toolBarIcon"src="./src/assets/img/toolIcon/tool-icon-trash.svg" alt="deleteIcon">刪除
+                      </a>
+                      <a href="#" type="button" class="manageBtn uploadBtn btn">
+                        <img class="toolBarIcon"src="./src/assets/img/toolIcon/tool-icon-upload.svg" alt="uploadIcon"> 上傳
+                      </a>
+                    </td>
+                    <td><a href="#" type="button" class="manageBtn checkBtn btn">
+                        <img class="toolBarIcon"src="./src/assets/img/toolIcon/tool-icon-check.svg" alt="checkIcon"> 檢視
+                       </a>
+                       <a href="#" type="button" class="manageBtn checkBtn btn">
+                        <img class="toolBarIcon"src="./src/assets/img/toolIcon/tool-icon-add.svg" alt="addIcon"> 新增
+                       </a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="amountBar text-end mt-5">
+              報價總金額 : NT$110,000，實收總金額 ：NT$88,000 ( 訂金 ：NT$55,000
+              | 中款 ：NT$33,000 | 尾款 ：NT$0 )
+            </div>
+          </div>
+        </div>
+        <div class="mainFunctionBar">
+          <!--功能:簡體中文版、ENGLISH、回到後台首頁、開啟前台首頁、管理員登出-->
+          <button class="btn">
+            <img class="mainFunctionIcon"
+              src="./src/assets/img/main-function-icon/main-function-icon-01.svg"
+              alt="chineseIcon"
+            />
+            簡體中文版
+          </button>
+          <button class="btn">
+            <img class="mainFunctionIcon"
+              src="./src/assets/img/main-function-icon/main-function-icon-01.svg"
+              alt="englishIcon"
+            />
+            ENGLISH
+          </button>
+          <button class="btn">
+            <img class="mainFunctionIcon"
+              src="./src/assets/img/main-function-icon/main-function-icon-02.svg"
+              alt="homeIcon"
+            />
+            回到後台首頁
+          </button>
+          <button class="btn">
+            <img class="mainFunctionIcon"
+              src="./src/assets/img/homeIcon-01.svg"
+              alt="homeIcon"
+            />
+            開啟前台首頁
+          </button>
+          <button class="btn">
+            <img class="mainFunctionIcon"
+              src="./src/assets/img/main-function-icon/main-function-icon-03.svg"
+              alt="logoutIcon"
+            />
+            管理員登出
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

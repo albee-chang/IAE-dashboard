@@ -1,0 +1,236 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+.main {
+  width: 100%;
+}
+// logo 位置設定
+nav {
+  background-color: none;
+  // box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  // position: relative;
+  z-index: 999;
+}
+.adminTitle {
+  position: absolute;
+  top: 55px;
+  right: 6%;
+  z-index: 999;
+}
+.IAE-logo-EN {
+  max-width: 50%;
+  height: auto;
+  object-fit: cover;
+  margin: 50px;
+}
+.globalIcon {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.sidebar {
+  padding-top: 11rem;
+  padding-left: 3rem;
+  padding-right: 0;
+  background-image: url(../img/loginBg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+.langCH {
+  color: #1e2b3d;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
+.listItem {
+  list-style: none;
+  background-color: #f7f3f0;
+  opacity: 0.8;
+  padding-top: 0.3rem;
+  padding-bottom: 0.5rem;
+}
+.listItem li {
+  margin: 0.2rem -10px 0.2rem -40px;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  &:nth-child(even) {
+    background-color: #e4f7fc;
+  }
+  &:hover {
+    cursor: pointer;
+    font-weight: bold;
+    .listCH {
+      color: #19d0ff;
+    }
+    .listEn {
+      color: #e487a2;
+    }
+    .activeBox {
+      display: block;
+    }
+  }
+
+  .listEn {
+    padding-left: 1rem;
+  }
+}
+.activeBox {
+  background-color: #e487a2;
+  width: 10px;
+  height: 100%;
+  display: none;
+}
+.sidebarContant {
+    height: 70%;
+}
+.progressBar {
+  background-color: #f0f0f0;
+  padding: 0.5rem 1rem;
+  color: #abadaf;
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+}
+.progressBarIcon {
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+}
+.filters {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  letter-spacing: 0.1rem;
+  select {
+    border: none;
+    border-bottom: 1px solid #787878;
+    color: #787878;
+    &:hover {
+        cursor: pointer;
+        color: $primary;
+        border-bottom: 1px solid $primary;
+      }
+  }
+}
+.dateFilter {
+    display: flex;
+}
+
+input {
+  border: 1px solid #abadaf;
+  color: #787878;
+  &:hover {
+    cursor: pointer;
+    color: $primary;
+    border: 1px solid #63B9CF;
+    box-shadow: 0 0 10px 0 rgba(99, 185, 207, 0.3);
+  }
+}
+
+.dataNums {
+  font-weight: bold;
+  color: #787878;
+  .dataTotalNums {
+    color: #e487a2;
+    font-size: 2rem;
+    padding: 0 1rem;
+  }
+}
+
+.toolBarIcon {
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+  margin-bottom: 2px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.toolBarBtn1:hover {
+  border: 3px solid #fad6f5;
+  border-radius: 2rem;
+  padding-top: 0.5rem;
+  cursor: pointer;
+  color: $primary;
+  font-weight: bold;
+  box-shadow: 0 0 10px 0 rgba(112, 22, 75, 0.3);
+}
+.toolBarBtn2:hover {
+  border: 3px solid #fad6f5;
+  border-radius: 2rem;
+  padding-top: 0.5rem;
+  cursor: pointer;
+  color: $primary;
+  font-weight: bold;
+  box-shadow: 0 0 10px 0 rgba(53, 81, 128, 0.3);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  thead {
+    background-color: #e487a2;
+    tr {
+      th {
+        padding: 0.2rem 1rem;
+        text-align: center;
+        color: white;
+        letter-spacing: 0.1rem;
+        font-size: 14px;
+      }
+    }
+  }
+  tbody {
+    tr {
+      td {
+        padding: 0.2rem 1rem;
+        text-align: left;
+        color: #787878;
+        font-size: 14px;
+        letter-spacing: 0.1rem;
+        a {
+            margin: 0;
+        }
+      }
+    }
+  }
+}
+
+.manageBtn {
+  font-size: 14px;
+  letter-spacing: 0.1rem;
+  color: #63B9CF;
+  margin: 0;
+}
+
+.amountBar {
+  display: inline;
+  float: right;
+  background-color: #fffc9e;
+  padding: 0.5rem 1.5rem;
+  letter-spacing: 0.1rem;
+}
+.mainFunctionBar {
+  float: right;
+  margin: 2rem 0;
+  font-size: 14px;
+  padding: 0.5rem 1rem;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  color: #6f7277;
+  .mainFunctionIcon {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    margin-right: 0.1rem;
+    margin-bottom: 0.1rem;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
