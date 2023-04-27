@@ -68,7 +68,7 @@ nav {
   &:hover {
     cursor: pointer;
     font-weight: bold;
-    background-color: #fffdd0;
+    background-color: #fffedd;
     .listCH {
       color: #19d0ff;
     }
@@ -120,6 +120,9 @@ nav {
       cursor: pointer;
       color: $primary;
       border-bottom: 1px solid $primary;
+    }
+    &:focus {
+      outline: none;
     }
   }
 }
@@ -246,38 +249,6 @@ table {
         color: white;
         letter-spacing: 0.1rem;
         font-size: 14px;
-        .order-btn {
-          display: flex;
-          flex-direction: column;
-        }
-
-        .order-btn.up,
-        .order-btn.down {
-          background-color: #6f7277;
-          width: 15px;
-          height: 15px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        .up span {
-          display: inline-block;
-          width: 0px;
-          height: 0px;
-          border-style: solid;
-          border-width: 0 10px 5px 10px;
-          border-color: transparent transparent #fff transparent;
-          transform: rotate(0deg);
-        }
-        .down span {
-          display: inline-block;
-          width: 0px;
-          height: 0px;
-          border-style: solid;
-          border-width: 0 10px 5px 10px;
-          border-color: transparent transparent #fff transparent;
-          transform: rotate(180deg);
-        }
       }
     }
   }
@@ -361,7 +332,33 @@ table {
     }
   }
 }
+th a.sort-by { 
+	padding-right: 18px;
+	position: relative;
+    color: white;
+    text-decoration: none;
+}
+a.sort-by:before,
+a.sort-by:after {
+	border: 4px solid transparent;
+	content: "";
+	display: block;
+	height: 0;
+	right: 5px;
+	top: 55%;
+	position: absolute;
+	width: 0;
+    background-color: #6f7277;
+}
+a.sort-by:before {
 
+	border-bottom-color: #ffffff;
+	margin-top: -8px;
+}
+a.sort-by:after {
+	border-top-color: #ffffff;
+	margin-top: 2px;
+}
 @media screen and (max-width: 900px) {
     .main {
         margin: 0;
@@ -390,16 +387,24 @@ table {
   .filters {
     display: flex;
     flex-direction: column;
+    margin-bottom: 0.5rem;
+    background-color: #63b9cf10;
   }
 
   .filters > * {
-    margin-top: 10px;
+    margin-top: 1rem;
+    width: 100%;
   }
 
   .filters select {
     display: block;
     width: 100%;
-    margin: 0;
+    margin: 0.5rem 0;
+    background-color: transparent;
+    &:hover {
+        cursor: pointer;
+        background-color: #e487a11c;
+    }
   }
 
   .filters .dateFilter {
