@@ -10864,6 +10864,8 @@ textarea.form-control-lg {
 
 ::placeholder {
   color: #bfced1;
+  padding: 0 0.5rem;
+  letter-spacing: 0.1rem;
 }
 
 .loginBtn {
@@ -10886,13 +10888,22 @@ textarea.form-control-lg {
   box-sizing: border-box;
 }
 
+body {
+  height: 100vh;
+}
+
 .main {
   width: 100%;
+  height: 100%;
 }
 
 nav {
   background-color: none;
   z-index: 999;
+}
+
+.container-fluid, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
+  margin: 0 auto;
 }
 
 .adminTitle {
@@ -10916,7 +10927,7 @@ nav {
 }
 
 .sidebar {
-  padding-top: 11rem;
+  padding-top: 11.5rem;
   padding-left: 3rem;
   padding-right: 0;
   background-image: url(../img/loginBg.png);
@@ -10935,21 +10946,20 @@ nav {
   list-style: none;
   background-color: #f7f3f0;
   opacity: 0.8;
-  padding-top: 0.3rem;
+  padding-top: 0.2rem;
   padding-bottom: 0.5rem;
+  padding-left: 0;
 }
 
 .listItem li {
-  margin: 0.2rem -10px 0.2rem -40px;
+  margin: 0rem -2px 0rem 0px;
   background-color: rgba(255, 255, 255, 0.6);
   padding: 0.5rem 0 0.5rem 0.5rem;
-}
-.listItem li:nth-child(even) {
-  background-color: #e4f7fc;
 }
 .listItem li:hover {
   cursor: pointer;
   font-weight: bold;
+  background-color: #fffdd0;
 }
 .listItem li:hover .listCH {
   color: #19d0ff;
@@ -10994,12 +11004,13 @@ nav {
   justify-content: space-around;
   align-items: center;
   padding: 0.5rem 1rem;
-  letter-spacing: 0.1rem;
+  letter-spacing: 1rem;
 }
 .filters select {
   border: none;
   border-bottom: 1px solid #787878;
   color: #787878;
+  list-style: none;
 }
 .filters select:hover {
   cursor: pointer;
@@ -11009,6 +11020,24 @@ nav {
 
 .dateFilter {
   display: flex;
+  padding: 0 0.2rem;
+  position: relative;
+}
+.dateFilter .icon-calendar-start {
+  position: absolute;
+  top: 0.2rem;
+  left: 6.5rem;
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
+.dateFilter .icon-calendar-end {
+  position: absolute;
+  top: 0.2rem;
+  left: 16rem;
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
 }
 
 input {
@@ -11018,8 +11047,19 @@ input {
 input:hover {
   cursor: pointer;
   color: #668ecf;
-  border: 1px solid #63B9CF;
+  border: 1px solid #63b9cf;
   box-shadow: 0 0 10px 0 rgba(99, 185, 207, 0.3);
+}
+input:focus {
+  outline: none;
+}
+
+input::-internal-datetime-container {
+  flex-flow: row-reverse;
+}
+
+input[type=date i]::-webkit-calendar-picker-indicator {
+  background-image: url(https://cdn-icons-png.flaticon.com/512/2278/2278017.png);
 }
 
 .dataNums {
@@ -11033,8 +11073,8 @@ input:hover {
 }
 
 .toolBarIcon {
-  width: 25px;
-  height: 25px;
+  width: 22px;
+  height: 22px;
   object-fit: cover;
   margin-bottom: 2px;
 }
@@ -11062,6 +11102,34 @@ input:hover {
   box-shadow: 0 0 10px 0 rgba(53, 81, 128, 0.3);
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f5f5;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c2e9f1 0% 0% no-repeat padding-box;
+  border-radius: 10px;
+  opacity: 0.5;
+}
+
+.dataTable {
+  white-space: nowrap;
+  overflow: hidden;
+  overflow-x: auto;
+  scrollbar-color: transparent transparent;
+  scrollbar-track-color: transparent;
+}
+.dataTable:hover::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  display: block;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -11077,21 +11145,86 @@ table thead tr th {
   letter-spacing: 0.1rem;
   font-size: 14px;
 }
+table thead tr th .order-btn {
+  display: flex;
+  flex-direction: column;
+}
+table thead tr th .order-btn.up,
+table thead tr th .order-btn.down {
+  background-color: #6f7277;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+table thead tr th .up span {
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 0 10px 5px 10px;
+  border-color: transparent transparent #fff transparent;
+  transform: rotate(0deg);
+}
+table thead tr th .down span {
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 0 10px 5px 10px;
+  border-color: transparent transparent #fff transparent;
+  transform: rotate(180deg);
+}
+table tbody tr {
+  color: #787878;
+}
 table tbody tr td {
   padding: 0.2rem 1rem;
   text-align: left;
-  color: #787878;
   font-size: 14px;
   letter-spacing: 0.1rem;
 }
-table tbody tr td a {
-  margin: 0;
+table tbody tr td a:hover {
+  color: #1e2b3d;
+}
+table tbody tr:nth-child(odd) {
+  color: #63b9cf;
+}
+table tbody tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+.editFunction a {
+  width: 20px;
+  display: flex;
+  padding: 0.1rem;
+  font-size: 10px;
+}
+
+.editFunction2 a {
+  width: 20px;
+  display: flex;
+  padding: 0;
+  font-size: 10px;
+}
+
+.making {
+  border: none;
+  background-color: #a7a7a7;
+  color: white;
+}
+
+.cancle {
+  border: none;
+  background-color: white;
+  color: #63b9cf;
 }
 
 .manageBtn {
   font-size: 14px;
   letter-spacing: 0.1rem;
-  color: #63B9CF;
+  color: #63b9cf;
   margin: 0;
 }
 
@@ -11105,7 +11238,6 @@ table tbody tr td a {
 
 .mainFunctionBar {
   float: right;
-  margin: 2rem 0;
   font-size: 14px;
   padding: 0.5rem 1rem;
   letter-spacing: 0.1rem;
@@ -11121,4 +11253,58 @@ table tbody tr td a {
 }
 .mainFunctionBar .mainFunctionIcon:hover {
   cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  .main {
+    margin: 0;
+  }
+  .navbar-toggler {
+    margin: 1rem;
+  }
+  .adminTitle {
+    position: initial;
+    margin-top: -50px;
+  }
+  .IAE-logo-EN {
+    max-width: 100%;
+    margin: 1rem auto;
+  }
+  .globalIcon {
+    display: none;
+  }
+  .listItem {
+    background-color: rgba(99, 185, 207, 0.2823529412);
+  }
+  .filters {
+    display: flex;
+    flex-direction: column;
+  }
+  .filters > * {
+    margin-top: 10px;
+  }
+  .filters select {
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+  .filters .dateFilter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .filters .dateFilter input {
+    margin-left: 5px;
+  }
+  .amountBar {
+    font-size: 14px;
+    letter-spacing: 0.5rem;
+    line-height: 1.5rem;
+  }
+  .mainFunctionBar {
+    background-color: rgba(228, 135, 161, 0.3019607843);
+  }
+  .mainFunctionBar button {
+    font-size: 12px;
+  }
 }/*# sourceMappingURL=all.css.map */
