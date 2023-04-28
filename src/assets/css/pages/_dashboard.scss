@@ -126,27 +126,7 @@ nav {
     }
   }
 }
-.dateFilter {
-  display: flex;
-  padding: 0 0.2rem;
-  position: relative;
-  .icon-calendar-start {
-    position: absolute;
-    top: 0.2rem;
-    left: 6.5rem;
-    width: 20px;
-    height: 20px;
-    object-fit: cover;
-  }
-  .icon-calendar-end {
-    position: absolute;
-    top: 0.2rem;
-    left: 16rem;
-    width: 20px;
-    height: 20px;
-    object-fit: cover;
-  }
-}
+
 
 input {
   border: 1px solid #abadaf;

@@ -10814,6 +10814,7 @@ textarea.form-control-lg {
   bottom: 0;
   right: 0;
   z-index: -999;
+  height: 100%;
 }
 
 .container {
@@ -10841,7 +10842,7 @@ textarea.form-control-lg {
   left: 0;
   bottom: 10%;
   right: 0;
-  width: 100%;
+  width: 80%;
   height: 100%;
   margin: 0 auto;
   object-fit: cover;
@@ -10869,12 +10870,18 @@ textarea.form-control-lg {
 }
 
 .loginBtn {
-  margin-top: 110px;
+  margin-top: 50px;
   width: 250px;
   height: 40px;
   border: 2px solid white;
   background-color: white 0.5;
-  box-shadow: 0 0 5px 5px #9fdcff;
+  box-shadow: 0 0 5px 3px #9fdcff;
+}
+.loginBtn:hover {
+  background-color: transparent;
+  border: 2px solid #9fdcff;
+  color: #668ecf;
+  box-shadow: 0 0 5px 2px #fff;
 }
 
 @media screen and (max-width: 768px) {
@@ -11019,28 +11026,6 @@ nav {
 }
 .filters select:focus {
   outline: none;
-}
-
-.dateFilter {
-  display: flex;
-  padding: 0 0.2rem;
-  position: relative;
-}
-.dateFilter .icon-calendar-start {
-  position: absolute;
-  top: 0.2rem;
-  left: 6.5rem;
-  width: 20px;
-  height: 20px;
-  object-fit: cover;
-}
-.dateFilter .icon-calendar-end {
-  position: absolute;
-  top: 0.2rem;
-  left: 16rem;
-  width: 20px;
-  height: 20px;
-  object-fit: cover;
 }
 
 input {
