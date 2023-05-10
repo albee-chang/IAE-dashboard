@@ -89,7 +89,27 @@ nav {
   width: 10px;
   height: 100%;
   display: none;
+  z-index: 1;
 }
+
+.collapse{
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.card-body {
+  border: none;
+  border-radius: 0.1px;
+  &:hover
+  .card-body-border {
+    z-index: 1;
+    border-bottom: 0.25rem solid #63b9cf;
+    width: 60%;
+    opacity: 0.8;
+    background-color: #fffedd;
+  }
+}
+
+
 .sidebarContant {
   height: 70%;
 }
@@ -339,31 +359,37 @@ a.sort-by:after {
 	border-top-color: #ffffff;
 	margin-top: 2px;
 }
+
+
 @media screen and (max-width: 900px) {
-    .main {
-        margin: 0;
-
+  .main {
+    margin: 0;
     }
-.navbar-toggler {
-    margin: 1rem;
-}
-    .adminTitle {
-        position: initial;
-        margin-top: -50px;
-      }
-      .IAE-logo-EN {
-       max-width: 100%;
-       margin: 1rem auto;
-      }
-      .globalIcon {
-       display: none;
-      }
-      .contant {
 
-      }
-      .listItem {
-        background-color: #63b9cf48;
-      }
+  .navbar-toggler {
+    margin: 1rem;
+  }
+  .adminTitle {
+    position: initial;
+    margin-top: -50px;
+  }
+
+  .IAE-logo-EN {
+    max-width: 100%;
+    margin: 1rem auto;
+  }
+  .globalIcon {
+    display: none;
+  }
+
+  .listItem {
+    background-color: #63b9cf48;
+    .collapse{
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+  }
+  
+
   .filters {
     display: flex;
     flex-direction: column;
@@ -396,11 +422,11 @@ a.sort-by:after {
   .filters .dateFilter input {
     margin-left: 5px;
   }
-.amountBar {
+  .amountBar {
     font-size: 14px;
     letter-spacing: 0.5rem;
     line-height: 1.5rem;
-}
+  }
   .mainFunctionBar {
     background-color: #e487a14d;
 
@@ -408,6 +434,8 @@ a.sort-by:after {
         font-size: 12px;
     }
   }
+
+
 
 }
 
