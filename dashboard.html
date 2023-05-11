@@ -14,11 +14,29 @@
         <!-- 在寬度小於 768px 時隱藏此元素 -->
         <h5 class="langCH ps-2">繁體中文</h5>
         <ul class="listItem">
-          <li class="position-relative">
+          <li
+            class="position-relative dropdown"
+            data-bs-toggle="collapse"
+            href="#collapseExample"
+            role="button"
+            aria-expanded="false"
+            aria-controls="collapseExample"
+          >
             <span class="listCH">關於耘想</span
             ><span class="listEn">About Us</span>
             <span class="position-absolute top-0 start-100 activeBox"></span>
           </li>
+          <ul class="collapse" id="collapseExample">
+            <li class="card card-body">
+              <span class="card-body-border">分類一</span>
+            </li>
+            <li class="card card-body">
+              <span class="card-body-border">分類二</span>
+            </li>
+            <li class="card card-body">
+              <span class="card-body-border">分類三</span>
+            </li>
+          </ul>
           <li class="position-relative">
             <span class="listCH">製作項目</span
             ><span class="listEn">Services</span>
@@ -109,13 +127,31 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarMenu">
             <ul class="listItem navbar-nav">
-              <li class="position-relative nav-item nav-item">
+              <li
+                class="position-relative nav-item nav-item"
+                data-bs-toggle="collapse"
+                href="#collapseExample"
+                role="button"
+                aria-expanded="false"
+                aria-controls="collapseExample"
+              >
                 <span class="listCH">關於耘想</span
                 ><span class="listEn">About Us</span>
                 <span
                   class="position-absolute top-0 start-100 activeBox"
                 ></span>
               </li>
+              <ul class="collapse" id="collapseExample">
+                <li class="card card-body">
+                  <span class="card-body-border">分類一</span>
+                </li>
+                <li class="card card-body">
+                  <span class="card-body-border">分類二</span>
+                </li>
+                <li class="card card-body">
+                  <span class="card-body-border">分類三</span>
+                </li>
+              </ul>
               <li class="position-relative nav-item">
                 <span class="listCH">製作項目</span
                 ><span class="listEn">Services</span>
@@ -374,8 +410,7 @@
                 <thead>
                   <tr>
                     <th><input type="checkbox" /></th>
-                    <th><a href="#" class="sort-by">編號</a>
-                    </th>
+                    <th><a href="#" class="sort-by">編號</a></th>
                     <th><a href="#" class="sort-by">案件標題</a></th>
                     <th><a href="#" class="sort-by">客戶名稱</a></th>
                     <th><a href="#" class="sort-by">聯絡人</a></th>
@@ -687,7 +722,6 @@
         </div>
       </div>
     </div>
-    <script src="./src/assets/js/main.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
@@ -698,5 +732,6 @@
       integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
       crossorigin="anonymous"
     ></script>
+    <script src="./src/assets/js/main.js"></script>
   </body>
 </html>
